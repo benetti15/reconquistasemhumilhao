@@ -6,30 +6,28 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Esse material serve se ele estiver distante?", a: "Sim. O mini-guia foi pensado justamente para momentos em que a distância, a frieza ou a confusão fazem você agir no impulso e piorar a situação." },
-  { q: "Serve se eu já corri atrás?", a: "Sim. Mesmo que você já tenha cometido erros, ainda é importante reorganizar sua postura e parar de reforçar uma imagem de desespero." },
-  { q: "Serve se ele estiver com outra?", a: "Sim. O material também ajuda você a entender como não se diminuir ainda mais diante desse cenário e como agir com mais lucidez." },
-  { q: "Isso é curso ou ebook?", a: "É um mini-guia digital, direto e prático, feito para leitura rápida e aplicação imediata." },
-  { q: "O acesso é imediato?", a: "Sim. Assim que a compra for confirmada, o acesso ao material é liberado." },
-  { q: "Isso garante que ele vai voltar?", a: "Não. O objetivo do mini-guia não é prometer controle sobre o outro, mas ajudar você a parar os comportamentos que diminuem seu valor e a se reposicionar com muito mais inteligência." },
-  { q: "Em quanto tempo eu consigo ler?", a: "A leitura é rápida, objetiva e pensada para gerar clareza logo no início." },
-  { q: "Esse material é só para quem terminou agora?", a: "Não. Ele também pode ajudar mulheres que já estão afastadas há mais tempo, mas ainda se percebem presas emocionalmente e cometendo os mesmos erros." },
+  { q: "Como vou receber o guia?", a: "Imediatamente após o pagamento, você recebe o link de acesso por e-mail. O guia está em formato PDF — você pode ler no celular, tablet ou computador, quando e onde quiser." },
+  { q: "Funciona mesmo que eu já tenha corrido atrás antes?", a: 'Sim. O guia foi criado exatamente para quem já cometeu alguns dos erros clássicos — e quer entender como reconstruir o valor percebido mesmo depois disso.' },
+  { q: "E se eu não quiser meu dinheiro de volta?", a: "Se dentro de 7 dias você sentir que o guia não valeu, basta pedir o reembolso e devolvemos 100% do valor — sem perguntas, sem burocracia. O risco é zero." },
+  { q: "Isso é sobre manipulação ou joguinhos?", a: "Não. A abordagem é honesta e focada em você — em quem você se torna nesse processo, não em técnicas para forçar o outro a fazer algo." },
+  { q: "E se ele não voltar depois que eu ler?", a: 'O guia tem um capítulo inteiro sobre isso — porque isso precisa ser dito com honestidade. O processo tem valor independente do resultado: você para de agir de formas que te envergonham e se torna a versão de você que qualquer homem vai ter que se esforçar para merecer.' },
 ];
 
 const FaqSection = () => (
-  <section className="section-padding bg-background">
-    <div className="section-container max-w-2xl">
-      <h2 className="text-3xl md:text-4xl font-bold text-center leading-tight mb-2">
-        Perguntas <span className="text-primary italic">Frequentes</span>
-      </h2>
-      <div className="section-divider mb-10" />
-      <Accordion type="single" collapsible className="space-y-3">
+  <section className="section-padding" style={{ background: "hsl(var(--dark2))" }}>
+    <div className="section-container max-w-[800px]">
+      <p className="section-label">Dúvidas frequentes</p>
+      <h2 className="section-title">Antes de decidir.</h2>
+      <Accordion type="single" collapsible className="space-y-2.5 mt-9">
         {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-xl px-5 bg-card/50 overflow-hidden">
-            <AccordionTrigger className="text-left font-serif font-semibold text-foreground text-base py-4 hover:no-underline">
+          <AccordionItem key={i} value={`faq-${i}`} className="rounded-2xl overflow-hidden px-5" style={{
+            background: "hsl(0 0% 100% / 0.025)",
+            border: "1px solid hsl(0 0% 100% / 0.06)"
+          }}>
+            <AccordionTrigger className="text-left font-sans font-medium text-white text-[15px] py-4 hover:no-underline">
               {f.q}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-4">
+            <AccordionContent className="text-sm text-muted-foreground leading-[1.8] pb-4">
               {f.a}
             </AccordionContent>
           </AccordionItem>

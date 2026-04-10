@@ -1,59 +1,65 @@
-import mockup from "@/assets/mockup-guide-premium.png";
-import { Zap, FileText, BookOpen, Clock, Target, ShieldCheck } from "lucide-react";
+import { Check, Shield, Lock, Layers } from "lucide-react";
 
-const bullets = [
-  { icon: Zap, text: "Acesso imediato" },
-  { icon: FileText, text: "Formato digital" },
-  { icon: BookOpen, text: "Leitura prática" },
-  { icon: Clock, text: "Conteúdo aplicável" },
-  { icon: Target, text: "Ideal para quem precisa de direção agora" },
+const items = [
+  { text: "6 capítulos completos", desc: "do diagnóstico ao reposicionamento, do timing à reabertura de contato" },
+  { text: "Plano de ação de 7 dias", desc: "o que fazer exatamente, dia a dia, para mudar a dinâmica" },
+  { text: "Exemplos reais de mensagens", desc: "que reabrem contato sem criar pressão ou mostrar desespero" },
+  { text: "Design premium", desc: "leitura agradável com cards, destaques e layout visual profissional" },
 ];
 
 const OfferSection = () => (
-  <section id="oferta" className="section-padding bg-cream">
-    <div className="section-container">
-      <div className="max-w-2xl mx-auto rounded-3xl border-2 border-primary/20 bg-background p-8 md:p-12 text-center relative overflow-hidden"
-        style={{ boxShadow: "0 20px 60px -12px hsl(14 30% 53% / 0.15)" }}>
-        {/* Top accent bar */}
-        <div className="absolute top-0 left-0 right-0 h-1" style={{
-          background: "linear-gradient(90deg, hsl(var(--primary) / 0.2), hsl(var(--primary)), hsl(var(--primary) / 0.2))"
-        }} />
+  <section id="oferta" className="section-padding relative overflow-hidden" style={{
+    background: "linear-gradient(135deg, hsl(330 20% 5%) 0%, hsl(330 30% 8%) 50%, hsl(330 20% 5%) 100%)"
+  }}>
+    {/* Radial glow */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{
+      background: "radial-gradient(ellipse, hsl(var(--pink) / 0.08) 0%, transparent 70%)"
+    }} />
 
-        <img src={mockup} alt="Mini-guia" loading="lazy" width={800} height={1024} className="w-36 mx-auto drop-shadow-lg mb-6 rounded-lg" />
-        <h2 className="text-3xl md:text-4xl font-bold">
-          Reconquista <span className="text-primary italic">Sem Humilhação</span>
-        </h2>
-        <p className="mt-3 text-muted-foreground">
-          Mini-guia digital prático para voltar a ser desejada sem correr atrás, implorar ou perder seu valor.
-        </p>
-        <div className="flex flex-col items-start gap-3 mt-8 max-w-xs mx-auto">
-          {bullets.map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-3 text-sm text-foreground">
-              <Icon className="w-4 h-4 text-primary" />
-              <span>{text}</span>
+    <div className="section-container relative z-10">
+      <div className="offer-card">
+        <h2 className="font-serif text-[28px] font-bold text-white mb-2">Reconquista Sem Humilhação</h2>
+        <p className="text-sm text-muted-foreground mb-7 leading-[1.6]">Guia de Emergência Emocional — PDF completo com entrega imediata</p>
+
+        <div className="text-left mb-8">
+          <p className="text-[11px] tracking-[0.1em] uppercase text-pink-soft mb-3.5">O que você recebe hoje</p>
+          {items.map((item, i) => (
+            <div key={i} className="flex items-start gap-3 py-2.5" style={{ borderBottom: i < items.length - 1 ? "1px solid hsl(0 0% 100% / 0.04)" : "none" }}>
+              <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5" style={{ background: "hsl(var(--pink) / 0.2)" }}>
+                <Check className="w-2.5 h-2.5 text-pink-soft" />
+              </div>
+              <p className="text-sm leading-[1.5]" style={{ color: "hsl(330 25% 75%)" }}>
+                <strong className="text-white">{item.text}</strong> — {item.desc}
+              </p>
             </div>
           ))}
         </div>
 
-        {/* Guarantee badge */}
-        <div className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-          <ShieldCheck className="w-5 h-5 text-primary" />
-          <span>Compra 100% segura</span>
+        {/* Price */}
+        <div className="mb-6">
+          <p className="text-sm line-through" style={{ color: "hsl(330 15% 28%)" }}>De R$ 27,00</p>
+          <div className="font-serif text-[52px] font-black text-white leading-none mt-1">
+            <sup className="text-[22px] align-super text-pink-soft">R$</sup> 1<sup className="text-[28px] align-middle text-pink-soft">,99</sup>
+          </div>
+          <p className="text-xs text-muted-foreground mt-1.5">pagamento único · sem mensalidade · acesso vitalício</p>
         </div>
 
-        <div className="mt-4">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Hoje por apenas</p>
-          <p className="text-6xl md:text-7xl font-bold text-cta mt-2 drop-shadow-sm">
-            R$1<span className="text-4xl">,99</span>
-          </p>
-          <p className="text-sm text-muted-foreground mt-2 max-w-sm mx-auto">
-            Um valor simbólico para te ajudar a evitar mais uma recaída, mais uma humilhação e mais um erro movido pela saudade.
-          </p>
-        </div>
-        <a href="#oferta" className="cta-button inline-block mt-8 animate-pulse-soft">
-          Sim, eu quero parar de me humilhar
+        <a href="#oferta" className="cta-button block w-full text-center mb-3.5">
+          🔒 Quero meu acesso agora — R$ 1,99
         </a>
-        <p className="text-xs text-muted-foreground mt-3">Acesso imediato após a confirmação</p>
+
+        <div className="flex justify-center gap-4 flex-wrap">
+          {[
+            { icon: Shield, text: "Garantia de 7 dias" },
+            { icon: Lock, text: "Pagamento seguro" },
+            { icon: Layers, text: "Entrega imediata" },
+          ].map(({ icon: Icon, text }) => (
+            <span key={text} className="flex items-center gap-1.5 text-[11px]" style={{ color: "hsl(330 18% 35%)" }}>
+              <Icon className="w-3 h-3" />
+              {text}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   </section>

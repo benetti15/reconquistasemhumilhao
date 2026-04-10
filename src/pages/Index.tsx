@@ -1,33 +1,33 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import UrgencyBar from "@/components/UrgencyBar";
 import HeroSection from "@/components/HeroSection";
 import PainSection from "@/components/PainSection";
 import WhyChasingSection from "@/components/WhyChasingSection";
-import SolutionSection from "@/components/SolutionSection";
 import InsideSection from "@/components/InsideSection";
 import TransformSection from "@/components/TransformSection";
 import ForWhomSection from "@/components/ForWhomSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import OfferSection from "@/components/OfferSection";
 import ValueVsPriceSection from "@/components/ValueVsPriceSection";
-import OrderBumpSection from "@/components/OrderBumpSection";
 import FaqSection from "@/components/FaqSection";
 import ClosingSection from "@/components/ClosingSection";
+import FooterSection from "@/components/FooterSection";
 
 const Index = () => (
   <main>
+    <UrgencyBar />
     <HeroSection />
     <ScrollReveal><PainSection /></ScrollReveal>
     <ScrollReveal><WhyChasingSection /></ScrollReveal>
-    <ScrollReveal><SolutionSection /></ScrollReveal>
     <ScrollReveal><InsideSection /></ScrollReveal>
     <ScrollReveal><TransformSection /></ScrollReveal>
     <ScrollReveal><ForWhomSection /></ScrollReveal>
     <ScrollReveal><TestimonialsSection /></ScrollReveal>
     <ScrollReveal><OfferSection /></ScrollReveal>
-    <ScrollReveal><ValueVsPriceSection /></ScrollReveal>
-    <ScrollReveal><OrderBumpSection /></ScrollReveal>
+    <ValueVsPriceSection />
     <ScrollReveal><FaqSection /></ScrollReveal>
     <ScrollReveal><ClosingSection /></ScrollReveal>
+    <FooterSection />
   </main>
 );
 
