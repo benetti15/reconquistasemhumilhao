@@ -28,7 +28,7 @@ const ClosingSection = () => (
         Quero acessar o mini-guia agora
       </a>
       <p className="text-sm text-muted-foreground mt-3">
-        Acesso imediato por apenas <strong className="text-primary">R$1,99</strong>
+        Acesso imediato por apenas <strong className="text-wine font-bold">R$1,99</strong>
       </p>
     </div>
   </section>

@@ -43,8 +43,9 @@ const OfferSection = () => (
 
         <div className="mt-4">
           <p className="text-sm text-muted-foreground">Hoje por apenas</p>
-          <p className="text-5xl md:text-6xl font-bold text-primary mt-1">
+          <p className="text-5xl md:text-6xl font-bold text-wine mt-1">
             R$1<span className="text-3xl">,99</span>
+          </p>
           </p>
           <p className="text-sm text-muted-foreground mt-2 max-w-sm mx-auto">
             Um valor simbólico para te ajudar a evitar mais uma recaída, mais uma humilhação e mais um erro movido pela saudade.

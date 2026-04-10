@@ -51,7 +51,7 @@ const HeroSection = () => (
             </a>
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
-            Acesso imediato por apenas <strong className="text-primary">R$1,99</strong>
+            Acesso imediato por apenas <strong className="text-wine font-bold">R$1,99</strong>
           </p>
         </div>
         {/* Mockup */}
