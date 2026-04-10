@@ -5,14 +5,12 @@ const pains = [
   "Imagina ele com outra e seu coração afunda",
   "Tenta parecer forte, mas por dentro está em guerra",
   "Quer voltar, mas não quer mais se rastejar",
-  "Sente medo de ser esquecida enquanto finge estar bem",
-  "Se culpa por ainda amar alguém que te deixou confusa",
   "Se apega a qualquer sinal mínimo dele",
   "Aceita migalhas emocionais só para não perder contato",
 ];
 
 const PainSection = () => (
-  <section className="section-padding bg-card/50">
+  <section className="section-padding bg-cream">
     <div className="section-container text-center">
       <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
         Se você chegou até aqui, provavelmente<br className="hidden md:block" />{" "}

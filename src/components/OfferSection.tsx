@@ -4,13 +4,13 @@ import { Zap, FileText, BookOpen, Clock, Target } from "lucide-react";
 const bullets = [
   { icon: Zap, text: "Acesso imediato" },
   { icon: FileText, text: "Formato digital" },
-  { icon: BookOpen, text: "Leitura simples e objetiva" },
-  { icon: Clock, text: "Aplicação rápida" },
+  { icon: BookOpen, text: "Leitura prática" },
+  { icon: Clock, text: "Conteúdo aplicável" },
   { icon: Target, text: "Ideal para quem precisa de direção agora" },
 ];
 
 const OfferSection = () => (
-  <section id="oferta" className="section-padding bg-card/50">
+  <section id="oferta" className="section-padding bg-cream">
     <div className="section-container">
       <div className="max-w-2xl mx-auto rounded-3xl border-2 border-primary/20 bg-background p-8 md:p-12 shadow-xl text-center">
         <img src={mockup} alt="Mini-guia" loading="lazy" width={800} height={1024} className="w-36 mx-auto drop-shadow-lg mb-6" />

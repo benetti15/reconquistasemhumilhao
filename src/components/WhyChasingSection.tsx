@@ -2,7 +2,7 @@ const cards = [
   {
     behavior: "Mandar mensagem toda hora",
     seems: "No calor da dor parece conexão.",
-    reality: "Na prática, passa a sensação de ansiedade e necessidade.",
+    reality: "Na prática, transmite ansiedade e necessidade.",
   },
   {
     behavior: "Aceitar qualquer migalha",
@@ -13,6 +13,16 @@ const cards = [
     behavior: "Tentar explicar tudo",
     seems: "Parece maturidade.",
     reality: "Mas quase sempre vira excesso emocional em cima de alguém já distante.",
+  },
+  {
+    behavior: "Postar indiretas",
+    seems: "Parece força.",
+    reality: "Mas geralmente revela que você ainda está emocionalmente presa à reação dele.",
+  },
+  {
+    behavior: "Cobrar definição",
+    seems: "Parece clareza.",
+    reality: "Mas quando vem da dor, quase sempre comunica medo e urgência.",
   },
   {
     behavior: "Ficar disponível demais",
@@ -31,7 +41,7 @@ const WhyChasingSection = () => (
       <p className="mt-5 text-center text-muted-foreground max-w-2xl mx-auto leading-relaxed">
         Saudade não nasce de pressão. Desejo não volta com insistência. Valor não cresce com carência.
       </p>
-      <div className="grid md:grid-cols-2 gap-5 mt-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         {cards.map((c, i) => (
           <div key={i} className="benefit-card">
             <h3 className="font-serif font-bold text-lg text-foreground">{c.behavior}</h3>

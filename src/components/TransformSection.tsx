@@ -4,26 +4,24 @@ const before = [
   "Ansiedade constante",
   "Recaída emocional",
   "Impulso para mandar mensagem",
-  "Vigilância em rede social",
+  "Vigilância em redes sociais",
   "Humilhação silenciosa",
   "Medo de ser esquecida",
   "Dependência emocional disfarçada de amor",
-  "Sensação de estar sempre em desvantagem",
 ];
 
 const after = [
   "Mais clareza",
-  "Mais controle",
   "Mais postura",
+  "Mais controle",
   "Mais dignidade",
-  "Mais presença",
-  "Menos impulsividade",
+  "Menos impulso",
   "Mais valor percebido",
-  "Mais força para agir com inteligência",
+  "Mais inteligência emocional prática",
 ];
 
 const TransformSection = () => (
-  <section className="section-padding bg-card/50">
+  <section className="section-padding bg-cream">
     <div className="section-container">
       <h2 className="text-3xl md:text-4xl font-bold text-center leading-tight">
         A mudança começa quando você{" "}
@@ -41,7 +39,7 @@ const TransformSection = () => (
             ))}
           </div>
         </div>
-        <div className="rounded-2xl border border-primary/20 p-6 bg-highlight/30">
+        <div className="rounded-2xl border border-primary/20 p-6 bg-highlight/50">
           <h3 className="font-serif font-bold text-lg text-primary mb-4">Depois</h3>
           <div className="space-y-3">
             {after.map((a) => (
