@@ -1,5 +1,5 @@
-import mockup from "@/assets/mockup-guide.png";
-import { Zap, FileText, BookOpen, Clock, Target } from "lucide-react";
+import mockup from "@/assets/mockup-guide-premium.png";
+import { Zap, FileText, BookOpen, Clock, Target, ShieldCheck } from "lucide-react";
 
 const bullets = [
   { icon: Zap, text: "Acesso imediato" },
@@ -12,8 +12,14 @@ const bullets = [
 const OfferSection = () => (
   <section id="oferta" className="section-padding bg-cream">
     <div className="section-container">
-      <div className="max-w-2xl mx-auto rounded-3xl border-2 border-primary/20 bg-background p-8 md:p-12 shadow-xl text-center">
-        <img src={mockup} alt="Mini-guia" loading="lazy" width={800} height={1024} className="w-36 mx-auto drop-shadow-lg mb-6" />
+      <div className="max-w-2xl mx-auto rounded-3xl border-2 border-primary/20 bg-background p-8 md:p-12 text-center relative overflow-hidden"
+        style={{ boxShadow: "0 20px 60px -12px hsl(14 30% 53% / 0.15)" }}>
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1" style={{
+          background: "linear-gradient(90deg, hsl(var(--primary) / 0.2), hsl(var(--primary)), hsl(var(--primary) / 0.2))"
+        }} />
+
+        <img src={mockup} alt="Mini-guia" loading="lazy" width={800} height={1024} className="w-36 mx-auto drop-shadow-lg mb-6 rounded-lg" />
         <h2 className="text-3xl md:text-4xl font-bold">
           Reconquista <span className="text-primary italic">Sem Humilhação</span>
         </h2>
@@ -28,7 +34,14 @@ const OfferSection = () => (
             </div>
           ))}
         </div>
-        <div className="mt-8">
+
+        {/* Guarantee badge */}
+        <div className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <ShieldCheck className="w-5 h-5 text-primary" />
+          <span>Compra 100% segura</span>
+        </div>
+
+        <div className="mt-4">
           <p className="text-sm text-muted-foreground">Hoje por apenas</p>
           <p className="text-5xl md:text-6xl font-bold text-primary mt-1">
             R$1<span className="text-3xl">,99</span>

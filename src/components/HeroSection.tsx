@@ -1,4 +1,4 @@
-import mockup from "@/assets/mockup-guide.png";
+import mockup from "@/assets/mockup-guide-premium.png";
 import { Zap, Clock, BookOpen, Tag } from "lucide-react";
 
 const micros = [
@@ -9,12 +9,20 @@ const micros = [
 ];
 
 const HeroSection = () => (
-  <section className="section-padding bg-background pt-10 md:pt-16">
-    <div className="section-container">
+  <section className="relative overflow-hidden bg-background pt-8 pb-16 md:pt-12 md:pb-24 px-5 md:px-8 lg:px-12">
+    {/* Subtle gradient bg */}
+    <div className="absolute inset-0 opacity-30" style={{
+      background: "radial-gradient(ellipse at 70% 20%, hsl(14 30% 53% / 0.08), transparent 60%), radial-gradient(ellipse at 20% 80%, hsl(5 25% 33% / 0.05), transparent 50%)"
+    }} />
+
+    <div className="section-container relative z-10">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
         {/* Text */}
         <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase mb-6">
+            Mini-guia digital • Acesso imediato
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-foreground">
             Reconquista{" "}
             <span className="text-primary italic">Sem Humilhação</span>
           </h1>
@@ -47,13 +55,16 @@ const HeroSection = () => (
           </p>
         </div>
         {/* Mockup */}
-        <div className="flex-shrink-0 w-64 md:w-80 lg:w-96">
+        <div className="flex-shrink-0 w-64 md:w-80 lg:w-96 relative">
+          <div className="absolute -inset-8 rounded-full opacity-20" style={{
+            background: "radial-gradient(circle, hsl(14 30% 53% / 0.3), transparent 70%)"
+          }} />
           <img
             src={mockup}
             alt="Mini-guia Reconquista Sem Humilhação"
             width={800}
             height={1024}
-            className="w-full h-auto drop-shadow-2xl"
+            className="w-full h-auto drop-shadow-2xl relative z-10 rounded-lg"
           />
         </div>
       </div>

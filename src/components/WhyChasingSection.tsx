@@ -38,12 +38,16 @@ const WhyChasingSection = () => (
         Por que quanto mais você corre atrás,{" "}
         <span className="text-primary italic">mais ele se afasta?</span>
       </h2>
+      <div className="section-divider" />
       <p className="mt-5 text-center text-muted-foreground max-w-2xl mx-auto leading-relaxed">
         Saudade não nasce de pressão. Desejo não volta com insistência. Valor não cresce com carência.
       </p>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         {cards.map((c, i) => (
-          <div key={i} className="benefit-card">
+          <div key={i} className="benefit-card group">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+              <span className="text-primary font-serif font-bold text-sm">{i + 1}</span>
+            </div>
             <h3 className="font-serif font-bold text-lg text-foreground">{c.behavior}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{c.seems}</p>
             <p className="mt-1 text-sm text-primary font-medium">{c.reality}</p>
