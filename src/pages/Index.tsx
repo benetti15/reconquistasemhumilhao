@@ -6,6 +6,7 @@ import SolutionSection from "@/components/SolutionSection";
 import InsideSection from "@/components/InsideSection";
 import TransformSection from "@/components/TransformSection";
 import ForWhomSection from "@/components/ForWhomSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import OfferSection from "@/components/OfferSection";
 import ValueVsPriceSection from "@/components/ValueVsPriceSection";
 import OrderBumpSection from "@/components/OrderBumpSection";
@@ -21,6 +22,7 @@ const Index = () => (
     <ScrollReveal><InsideSection /></ScrollReveal>
     <ScrollReveal><TransformSection /></ScrollReveal>
     <ScrollReveal><ForWhomSection /></ScrollReveal>
+    <ScrollReveal><TestimonialsSection /></ScrollReveal>
     <ScrollReveal><OfferSection /></ScrollReveal>
     <ScrollReveal><ValueVsPriceSection /></ScrollReveal>
     <ScrollReveal><OrderBumpSection /></ScrollReveal>
