@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,46 +6,49 @@
 
 @layer base {
   :root {
-    --background: 30 25% 97%;
-    --foreground: 20 10% 15%;
+    --background: 25 33% 96%;       /* #F7F2EE */
+    --foreground: 16 16% 16%;       /* #2E2422 */
 
-    --card: 30 20% 95%;
-    --card-foreground: 20 10% 15%;
+    --card: 25 25% 93%;             /* #E9DDD3 approx */
+    --card-foreground: 16 16% 16%;
 
-    --popover: 30 25% 97%;
-    --popover-foreground: 20 10% 15%;
+    --popover: 25 33% 96%;
+    --popover-foreground: 16 16% 16%;
 
-    --primary: 350 35% 45%;
-    --primary-foreground: 30 25% 97%;
+    --primary: 14 30% 53%;          /* #B56E5A terracota */
+    --primary-foreground: 25 33% 96%;
 
-    --secondary: 25 30% 90%;
-    --secondary-foreground: 20 10% 25%;
+    --secondary: 22 25% 88%;        /* nude */
+    --secondary-foreground: 16 16% 20%;
 
-    --muted: 25 15% 92%;
-    --muted-foreground: 20 8% 45%;
+    --muted: 22 12% 90%;
+    --muted-foreground: 18 8% 40%;  /* #6D615C */
 
-    --accent: 350 25% 55%;
-    --accent-foreground: 30 25% 97%;
+    --accent: 5 25% 33%;            /* #6E4340 vinho suave */
+    --accent-foreground: 25 33% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 25 15% 85%;
-    --input: 25 15% 85%;
-    --ring: 350 35% 45%;
+    --border: 22 22% 85%;           /* #E5D6CD */
+    --input: 22 22% 85%;
+    --ring: 14 30% 53%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --rose-warm: 350 30% 50%;
-    --nude: 25 25% 85%;
-    --wine: 345 40% 30%;
-    --wine-soft: 345 30% 40%;
-    --almond: 25 20% 60%;
-    --warm-gray: 20 5% 55%;
-    --soft-black: 20 10% 15%;
-    --cream: 35 30% 95%;
-    --highlight: 350 40% 92%;
+    --terracota: 14 30% 53%;        /* #B56E5A */
+    --terracota-dark: 14 30% 45%;   /* #9D5B49 */
+    --wine: 5 25% 33%;              /* #6E4340 */
+    --wine-soft: 5 20% 38%;
+    --taupe: 18 14% 46%;            /* #8A6F63 */
+    --chocolate: 16 18% 19%;        /* #3B2B28 */
+    --warm-gray: 15 5% 42%;         /* #4E4744 */
+    --nude: 22 25% 88%;             /* #E9DDD3 */
+    --rose-warm: 18 22% 70%;        /* #C9A89A rosé queimado */
+    --cream: 30 50% 97%;            /* #FCF8F5 */
+    --highlight: 22 30% 94%;
+    --off-white: 25 33% 96%;        /* #F7F2EE */
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -88,27 +91,27 @@
   }
 
   .highlight-box {
-    @apply bg-highlight border border-primary/10 rounded-2xl p-6 md:p-8;
+    @apply bg-highlight border border-rose-warm/30 rounded-2xl p-6 md:p-8;
   }
 
   .pain-card {
-    @apply bg-card rounded-2xl p-5 border border-border/60 shadow-sm;
+    @apply bg-card rounded-2xl p-5 border border-border shadow-sm;
   }
 
   .benefit-card {
-    @apply bg-background rounded-2xl p-6 border border-primary/10 shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow;
   }
 
   .cta-button {
-    @apply w-full sm:w-auto px-8 py-4 text-base md:text-lg font-semibold rounded-xl
-           bg-primary text-primary-foreground hover:opacity-90
+    @apply w-full sm:w-auto px-8 py-4 text-base md:text-lg font-semibold rounded-2xl
+           bg-primary text-primary-foreground hover:bg-terracota-dark
            shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30
            transition-all duration-300 transform hover:-translate-y-0.5;
   }
 
   .cta-button-secondary {
-    @apply w-full sm:w-auto px-8 py-4 text-base font-semibold rounded-xl
-           bg-wine-soft text-primary-foreground hover:opacity-90
-           shadow-lg transition-all duration-300;
+    @apply w-full sm:w-auto px-8 py-4 text-base font-semibold rounded-2xl
+           bg-transparent border-2 border-primary text-primary
+           hover:bg-nude transition-all duration-300;
   }
 }

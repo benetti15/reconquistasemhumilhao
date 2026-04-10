@@ -5,13 +5,13 @@ const benefits = [
   "Pare de agir no desespero",
   "Entenda o que está afastando ainda mais",
   "Recupere postura emocional",
-  "Saiba como se posicionar com mais valor",
-  "Pare de confundir saudade com humilhação",
+  "Volte a se enxergar com mais valor",
+  "Saiba como se posicionar com inteligência",
   "Tenha clareza antes da próxima recaída",
 ];
 
 const SolutionSection = () => (
-  <section className="section-padding bg-card/50">
+  <section className="section-padding bg-cream">
     <div className="section-container">
       <h2 className="text-3xl md:text-4xl font-bold text-center leading-tight">
         É exatamente para isso que existe o mini-guia{" "}

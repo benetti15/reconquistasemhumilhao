@@ -6,15 +6,14 @@ const isFor = [
   "Sente que já correu atrás demais",
   "Está prestes a agir no impulso",
   "Quer recuperar dignidade emocional",
-  "Deseja ser percebida com mais valor",
-  "Precisa de direção prática e rápida",
+  "Quer se reposicionar com mais inteligência",
 ];
 
 const isNotFor = [
   "Quer fórmula mágica",
   "Quer controlar alguém à força",
   "Quer manipular o outro",
-  "Quer insistir em quem só te usa como reserva emocional",
+  "Quer insistir em quem só te usa",
   "Quer continuar se humilhando e chamar isso de amor",
 ];
 
@@ -26,7 +25,7 @@ const ForWhomSection = () => (
         <span className="text-primary italic">para a mulher certa</span>
       </h2>
       <div className="grid md:grid-cols-2 gap-6 mt-10">
-        <div className="rounded-2xl border border-primary/20 p-6 bg-highlight/30">
+        <div className="rounded-2xl border border-primary/20 p-6 bg-highlight/50">
           <h3 className="font-serif font-bold text-lg text-primary mb-4">✓ É para você se…</h3>
           <div className="space-y-3">
             {isFor.map((t) => (
