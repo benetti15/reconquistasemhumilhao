@@ -1,41 +1,35 @@
-import botanicalImg from "@/assets/botanical-decoration.jpg";
-
 const pains = [
-  "Você relê conversas antigas procurando sinais",
-  "Entra no perfil dele em silêncio, esperando algo mudar",
-  "Sente vontade de mandar mensagem e depois se arrepende",
-  "Imagina ele com outra e seu coração afunda",
-  "Tenta parecer forte, mas por dentro está em guerra",
-  "Quer voltar, mas não quer mais se rastejar",
-  "Se apega a qualquer sinal mínimo dele",
-  "Aceita migalhas emocionais só para não perder contato",
+  { emoji: "💬", text: 'Você manda mensagem de madrugada perguntando "você está bem?" — mas o que você realmente quer perguntar é "você ainda pensa em mim?"' },
+  { emoji: "📱", text: "Você checa o status dele, analisa as fotos curtidas, verifica se ele está online — e cada checagem rouba um pedaço da sua paz." },
+  { emoji: "😔", text: 'Você já disse "vou sumir" mais de uma vez. Mas três dias depois estava mandando mensagem de novo. E você sabe disso.' },
+  { emoji: "🙈", text: "Por fora você posta foto feliz. Por dentro, está em colapso. Essa incoerência vaza — e ele sente, mesmo sem você perceber." },
 ];
 
 const PainSection = () => (
-  <section className="section-padding bg-cream relative overflow-hidden">
-    <div className="section-container text-center relative z-10">
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-        Se você chegou até aqui, provavelmente<br className="hidden md:block" />{" "}
-        <span className="text-primary italic">está vivendo algo assim</span>
+  <section className="section-padding">
+    <div className="section-container">
+      <p className="section-label">Você se reconhece nisso?</p>
+      <h2 className="section-title">
+        Quando o amor vira <em className="text-pink-soft italic">desespero</em> — e você sente que está perdendo o controle.
       </h2>
-      <div className="section-divider" />
-      <div className="grid sm:grid-cols-2 gap-4 mt-10 text-left">
+      <p className="text-[15px] text-muted-foreground leading-[1.8] mb-2">
+        Existe uma cruel ironia no amor: quanto mais você quer alguém, mais você faz exatamente o que afasta essa pessoa.
+      </p>
+
+      <div className="grid sm:grid-cols-2 gap-3.5 mt-9">
         {pains.map((p, i) => (
-          <div key={i} className="pain-card flex items-start gap-3">
-            <span className="mt-1.5 w-2.5 h-2.5 rounded-full bg-primary/60 flex-shrink-0" />
-            <p className="text-foreground/85 text-sm md:text-base leading-relaxed">{p}</p>
+          <div key={i} className="pain-card">
+            <div className="text-[22px] mb-2.5">{p.emoji}</div>
+            <p className="text-sm leading-[1.7]" style={{ color: "hsl(330 25% 75%)" }}>
+              {p.text.split(/(\*\*.*?\*\*)/g).map((part, j) =>
+                part.startsWith("**") ? (
+                  <strong key={j} className="text-white font-medium">{part.slice(2, -2)}</strong>
+                ) : part
+              )}
+            </p>
           </div>
         ))}
       </div>
-      <div className="highlight-box mt-10 max-w-2xl mx-auto">
-        <p className="text-primary font-semibold text-lg italic">
-          O problema não é amar. O problema é se abandonar por medo de perder alguém.
-        </p>
-      </div>
-    </div>
-    {/* Decorative image */}
-    <div className="mt-12 max-w-3xl mx-auto px-5">
-      <img src={botanicalImg} alt="" loading="lazy" width={1200} height={512} className="w-full h-32 md:h-40 object-cover rounded-2xl opacity-60" />
     </div>
   </section>
 );

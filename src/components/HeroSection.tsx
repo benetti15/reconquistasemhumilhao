@@ -1,73 +1,78 @@
-import mockup from "@/assets/mockup-guide-premium.png";
-import { Zap, Clock, BookOpen, Tag } from "lucide-react";
-
-const micros = [
-  { icon: Zap, text: "Acesso imediato" },
-  { icon: Clock, text: "Leitura rápida" },
-  { icon: BookOpen, text: "Conteúdo prático" },
-  { icon: Tag, text: "Apenas R$1,99" },
-];
+import { Shield, Layers, Lock } from "lucide-react";
 
 const HeroSection = () => (
-  <section className="relative overflow-hidden bg-background pt-8 pb-16 md:pt-12 md:pb-24 px-5 md:px-8 lg:px-12">
-    {/* Subtle gradient bg */}
-    <div className="absolute inset-0 opacity-30" style={{
-      background: "radial-gradient(ellipse at 70% 20%, hsl(14 30% 53% / 0.08), transparent 60%), radial-gradient(ellipse at 20% 80%, hsl(5 25% 33% / 0.05), transparent 50%)"
+  <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-6 py-20 md:py-24">
+    {/* Background gradient */}
+    <div className="absolute inset-0 z-0" style={{
+      background: "radial-gradient(ellipse 80% 60% at 50% -10%, hsl(338 80% 30%) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 90% 80%, hsl(338 80% 18% / 0.27) 0%, transparent 60%), radial-gradient(ellipse 30% 30% at 10% 90%, hsl(338 72% 42% / 0.13) 0%, transparent 60%), hsl(var(--background))"
     }} />
 
-    <div className="section-container relative z-10">
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
-        {/* Text */}
-        <div className="flex-1 text-center lg:text-left">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase mb-6">
-            Mini-guia digital • Acesso imediato
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-foreground">
-            Reconquista{" "}
-            <span className="text-primary italic">Sem Humilhação</span>
-          </h1>
-          <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Descubra como voltar a ser desejada sem correr atrás, implorar ou perder seu valor depois do término
-          </p>
-          <p className="mt-6 text-base text-foreground/80 leading-relaxed max-w-lg mx-auto lg:mx-0">
-            Você ainda sente saudade. Ainda pensa nele. Mas no fundo já percebeu que correr atrás, mandar mensagem no impulso e aceitar migalha emocional só faz você se diminuir ainda mais.
-          </p>
-          <div className="highlight-box mt-6 max-w-lg mx-auto lg:mx-0">
-            <p className="text-primary font-semibold text-base md:text-lg italic leading-relaxed">
-              "Pare de se humilhar por alguém que só vai te enxergar diferente quando perceber o seu valor."
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-3 mt-8 max-w-sm mx-auto lg:mx-0">
-            {micros.map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Icon className="w-4 h-4 text-primary" />
-                <span>{text}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 lg:justify-start justify-center">
-            <a href="#oferta" className="cta-button text-center animate-pulse-soft">
-              Quero recuperar meu valor agora
-            </a>
-          </div>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Acesso imediato por apenas <strong className="text-cta font-bold text-base">R$1,99</strong>
-          </p>
-        </div>
-        {/* Mockup */}
-        <div className="flex-shrink-0 w-64 md:w-80 lg:w-96 relative">
-          <div className="absolute -inset-8 rounded-full opacity-20" style={{
-            background: "radial-gradient(circle, hsl(14 30% 53% / 0.3), transparent 70%)"
-          }} />
-          <img
-            src={mockup}
-            alt="Mini-guia Reconquista Sem Humilhação"
-            width={800}
-            height={1024}
-            className="w-full h-auto drop-shadow-2xl relative z-10 rounded-lg"
-          />
+    {/* Floating orbs */}
+    <div className="absolute w-[400px] h-[400px] rounded-full top-[-100px] right-[-100px] opacity-[0.08] z-0" style={{ background: "hsl(var(--pink))", filter: "blur(60px)", animation: "float1 8s ease-in-out infinite" }} />
+    <div className="absolute w-[300px] h-[300px] rounded-full bottom-0 left-[-80px] opacity-[0.06] z-0" style={{ background: "hsl(340 80% 55%)", filter: "blur(60px)", animation: "float2 10s ease-in-out infinite" }} />
+    <div className="absolute w-[200px] h-[200px] rounded-full top-[40%] right-[10%] opacity-[0.04] z-0" style={{ background: "hsl(var(--gold))", filter: "blur(60px)", animation: "float1 12s ease-in-out infinite reverse" }} />
+
+    <div className="relative z-10 text-center max-w-[780px]">
+      {/* Badge */}
+      <div className="inline-flex items-center gap-2 rounded-full px-5 py-1.5 text-[11px] font-medium tracking-[0.12em] uppercase text-pink-soft mb-8" style={{
+        background: "hsl(var(--pink) / 0.18)",
+        border: "1px solid hsl(var(--pink) / 0.35)"
+      }}>
+        <span className="w-1.5 h-1.5 rounded-full bg-pink-soft" style={{ animation: "pulse-dot 1.5s ease-in-out infinite" }} />
+        Guia de Emergência Emocional
+      </div>
+
+      <p className="text-[13px] tracking-[0.08em] text-muted-foreground mb-4">
+        Para mulheres que amam com intensidade — e querem se respeitar também
+      </p>
+
+      <h1 className="font-serif text-[clamp(38px,7vw,72px)] font-black leading-[1.05] text-foreground mb-3">
+        Reconquiste
+        <em className="block text-pink-soft italic">sem se humilhar.</em>
+      </h1>
+
+      {/* Divider */}
+      <div className="flex items-center justify-center gap-3 my-5">
+        <span className="w-10 h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(var(--pink)))" }} />
+        <span className="text-sm text-pink-soft">✦</span>
+        <span className="w-10 h-px" style={{ background: "linear-gradient(90deg, hsl(var(--pink)), transparent)" }} />
+      </div>
+
+      <p className="text-[clamp(15px,2.5vw,18px)] leading-[1.7] max-w-[580px] mx-auto mb-9" style={{ color: "hsl(330 25% 75%)" }}>
+        Descubra em poucas horas como <strong className="text-white font-medium">parar de destruir suas chances</strong>, recuperar seu valor e criar o cenário emocional certo para seu ex voltar a te enxergar com outros olhos —{" "}
+        <strong className="text-white font-medium">sem implorar, sem correr atrás, sem se abaixar.</strong>
+      </p>
+
+      {/* CTA */}
+      <div>
+        <p className="text-sm text-muted-foreground mb-2 tracking-wide">
+          De <s className="text-muted-foreground/50">R$ 27,00</s> por apenas{" "}
+          <strong className="text-gold text-base">R$ 1,99</strong>
+        </p>
+        <a href="#oferta" className="cta-button inline-flex flex-col items-center">
+          Quero acesso agora
+          <small>Entrega imediata · PDF completo</small>
+        </a>
+        <div className="flex justify-center gap-5 mt-4 flex-wrap">
+          {[
+            { icon: Shield, text: "7 dias de garantia" },
+            { icon: Layers, text: "Acesso instantâneo" },
+            { icon: Lock, text: "Compra 100% segura" },
+          ].map(({ icon: Icon, text }) => (
+            <span key={text} className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
+              <Icon className="w-3.5 h-3.5 text-pink-soft" />
+              {text}
+            </span>
+          ))}
         </div>
       </div>
+    </div>
+
+    {/* Scroll indicator */}
+    <div className="absolute bottom-7 left-1/2 opacity-40 z-10" style={{ animation: "bounce-arrow 2s ease-in-out infinite" }}>
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
     </div>
   </section>
 );

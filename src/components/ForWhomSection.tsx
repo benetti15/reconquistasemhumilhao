@@ -1,63 +1,35 @@
-import { Check, X } from "lucide-react";
-
-const isFor = [
-  "Ainda ama, mas está cansada de sofrer",
-  "Quer voltar sem implorar",
-  "Sente que já correu atrás demais",
-  "Está prestes a agir no impulso",
-  "Quer recuperar dignidade emocional",
-  "Quer se reposicionar com mais inteligência",
-];
-
-const isNotFor = [
-  "Quer fórmula mágica",
-  "Quer controlar alguém à força",
-  "Quer manipular o outro",
-  "Quer insistir em quem só te usa",
-  "Quer continuar se humilhando e chamar isso de amor",
+const tags = [
+  "Ainda sente pelo ex",
+  "Já correu atrás — e arrependeu",
+  "Quer ele de volta, mas com dignidade",
+  "Está exausta de ficar esperando uma resposta",
+  "Não quer mais se justificar",
+  "Sente que perdeu seu valor na relação",
+  "Quer parar de sabotar suas próprias chances",
+  "Precisa de clareza — não de falsas esperanças",
 ];
 
 const ForWhomSection = () => (
-  <section className="section-padding bg-background">
+  <section className="section-padding">
     <div className="section-container">
-      <h2 className="text-3xl md:text-4xl font-bold text-center leading-tight">
-        Esse mini-guia foi feito{" "}
-        <span className="text-primary italic">para a mulher certa</span>
+      <p className="section-label">Para quem é este guia</p>
+      <h2 className="section-title">
+        Você está no lugar <em className="text-pink-soft italic">certo</em> se...
       </h2>
-      <div className="section-divider" />
-      <div className="grid md:grid-cols-2 gap-6 mt-10">
-        <div className="rounded-2xl border border-primary/20 p-6 bg-highlight/50" style={{ boxShadow: "0 4px 24px -8px hsl(14 30% 53% / 0.08)" }}>
-          <h3 className="font-serif font-bold text-lg text-primary mb-4 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-              <Check className="w-4 h-4 text-primary" />
-            </span>
-            É para você se…
-          </h3>
-          <div className="space-y-3">
-            {isFor.map((t) => (
-              <div key={t} className="flex items-start gap-3 text-sm text-foreground">
-                <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <span>{t}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="rounded-2xl border border-border p-6 bg-background" style={{ boxShadow: "0 4px 24px -8px hsl(14 30% 53% / 0.05)" }}>
-          <h3 className="font-serif font-bold text-lg text-muted-foreground mb-4 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-              <X className="w-4 h-4 text-rose-warm" />
-            </span>
-            Não é para você se…
-          </h3>
-          <div className="space-y-3">
-            {isNotFor.map((t) => (
-              <div key={t} className="flex items-start gap-3 text-sm text-muted-foreground">
-                <X className="w-4 h-4 text-rose-warm mt-0.5 flex-shrink-0" />
-                <span>{t}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+
+      <div className="flex flex-wrap gap-2.5 mt-7">
+        {tags.map((t) => (
+          <span key={t} className="tag-pill">{t}</span>
+        ))}
+      </div>
+
+      <div className="mt-7 rounded-2xl p-5 text-[13px] text-muted-foreground leading-[1.8]" style={{
+        background: "hsl(0 0% 100% / 0.02)",
+        border: "1px solid hsl(0 0% 100% / 0.05)"
+      }}>
+        <p>
+          <strong className="text-muted-foreground/70">Este guia não é para você</strong> se você busca técnicas de manipulação, jogos psicológicos ou receitas mágicas para fazer alguém fazer o que você quer. Aqui a abordagem é honesta, emocional e focada em quem <em>você</em> se torna no processo.
+        </p>
       </div>
     </div>
   </section>
