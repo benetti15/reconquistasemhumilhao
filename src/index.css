@@ -121,16 +121,17 @@
   }
 
   .cta-button {
-    @apply w-full sm:w-auto px-10 py-4 text-base md:text-lg font-semibold rounded-2xl
-           bg-primary text-primary-foreground
+    @apply w-full sm:w-auto px-10 py-4 text-base md:text-lg font-bold rounded-2xl
+           text-white
            transition-all duration-300 transform;
-    box-shadow: 0 8px 24px -6px hsl(var(--primary) / 0.35);
+    background: linear-gradient(135deg, hsl(var(--wine)), hsl(var(--accent)));
+    box-shadow: 0 8px 28px -6px hsl(var(--wine) / 0.45);
   }
 
   .cta-button:hover {
-    background-color: hsl(var(--terracota-dark));
+    background: linear-gradient(135deg, hsl(var(--wine-soft)), hsl(var(--wine)));
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px -6px hsl(var(--primary) / 0.45);
+    box-shadow: 0 14px 36px -6px hsl(var(--wine) / 0.55);
   }
 
   .cta-button-secondary {
