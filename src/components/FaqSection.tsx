@@ -19,12 +19,13 @@ const faqs = [
 const FaqSection = () => (
   <section className="section-padding bg-background">
     <div className="section-container max-w-2xl">
-      <h2 className="text-3xl md:text-4xl font-bold text-center leading-tight mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-center leading-tight mb-2">
         Perguntas <span className="text-primary italic">Frequentes</span>
       </h2>
+      <div className="section-divider mb-10" />
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-xl px-5 bg-card/50">
+          <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-xl px-5 bg-card/50 overflow-hidden">
             <AccordionTrigger className="text-left font-serif font-semibold text-foreground text-base py-4 hover:no-underline">
               {f.q}
             </AccordionTrigger>

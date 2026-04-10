@@ -14,9 +14,11 @@ const ValueVsPriceSection = () => (
         Quanto custa{" "}
         <span className="text-primary italic">continuar errando?</span>
       </h2>
+      <div className="section-divider" />
       <div className="mt-10 max-w-lg mx-auto space-y-4">
         {comparisons.map((c, i) => (
-          <div key={i} className="pain-card text-left">
+          <div key={i} className="pain-card text-left flex items-center gap-3">
+            <span className="w-2 h-2 rounded-full bg-primary/50 flex-shrink-0" />
             <p className="text-foreground/85 text-sm md:text-base">{c}</p>
           </div>
         ))}

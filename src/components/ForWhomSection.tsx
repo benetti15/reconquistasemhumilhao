@@ -24,9 +24,15 @@ const ForWhomSection = () => (
         Esse mini-guia foi feito{" "}
         <span className="text-primary italic">para a mulher certa</span>
       </h2>
+      <div className="section-divider" />
       <div className="grid md:grid-cols-2 gap-6 mt-10">
-        <div className="rounded-2xl border border-primary/20 p-6 bg-highlight/50">
-          <h3 className="font-serif font-bold text-lg text-primary mb-4">✓ É para você se…</h3>
+        <div className="rounded-2xl border border-primary/20 p-6 bg-highlight/50" style={{ boxShadow: "0 4px 24px -8px hsl(14 30% 53% / 0.08)" }}>
+          <h3 className="font-serif font-bold text-lg text-primary mb-4 flex items-center gap-2">
+            <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+              <Check className="w-4 h-4 text-primary" />
+            </span>
+            É para você se…
+          </h3>
           <div className="space-y-3">
             {isFor.map((t) => (
               <div key={t} className="flex items-start gap-3 text-sm text-foreground">
@@ -36,8 +42,13 @@ const ForWhomSection = () => (
             ))}
           </div>
         </div>
-        <div className="rounded-2xl border border-border p-6 bg-background">
-          <h3 className="font-serif font-bold text-lg text-muted-foreground mb-4">✗ Não é para você se…</h3>
+        <div className="rounded-2xl border border-border p-6 bg-background" style={{ boxShadow: "0 4px 24px -8px hsl(14 30% 53% / 0.05)" }}>
+          <h3 className="font-serif font-bold text-lg text-muted-foreground mb-4 flex items-center gap-2">
+            <span className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
+              <X className="w-4 h-4 text-rose-warm" />
+            </span>
+            Não é para você se…
+          </h3>
           <div className="space-y-3">
             {isNotFor.map((t) => (
               <div key={t} className="flex items-start gap-3 text-sm text-muted-foreground">

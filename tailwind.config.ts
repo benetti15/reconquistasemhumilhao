@@ -53,6 +53,7 @@ export default {
         },
         terracota: "hsl(var(--terracota))",
         "terracota-dark": "hsl(var(--terracota-dark))",
+        "terracota-light": "hsl(var(--terracota-light))",
         "rose-warm": "hsl(var(--rose-warm))",
         nude: "hsl(var(--nude))",
         wine: "hsl(var(--wine))",
@@ -63,6 +64,7 @@ export default {
         cream: "hsl(var(--cream))",
         highlight: "hsl(var(--highlight))",
         "off-white": "hsl(var(--off-white))",
+        "gold-soft": "hsl(var(--gold-soft))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
