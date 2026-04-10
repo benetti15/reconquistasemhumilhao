@@ -51,6 +51,9 @@
     --highlight: 22 35% 95%;
     --off-white: 25 33% 96%;
     --gold-soft: 36 40% 72%;
+    --cta: 0 72% 51%;
+    --cta-hover: 0 72% 44%;
+    --cta-glow: 0 72% 51%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -121,17 +124,23 @@
   }
 
   .cta-button {
-    @apply w-full sm:w-auto px-10 py-4 text-base md:text-lg font-bold rounded-2xl
-           text-white
+    @apply w-full sm:w-auto px-12 py-5 text-lg md:text-xl font-bold rounded-2xl
+           text-white tracking-wide
            transition-all duration-300 transform;
-    background: linear-gradient(135deg, hsl(var(--wine)), hsl(var(--accent)));
-    box-shadow: 0 8px 28px -6px hsl(var(--wine) / 0.45);
+    background: linear-gradient(135deg, hsl(var(--cta)), hsl(0 60% 42%));
+    box-shadow: 0 10px 32px -4px hsl(var(--cta-glow) / 0.5), 0 0 0 0 hsl(var(--cta-glow) / 0);
+    animation: cta-glow-pulse 2.5s ease-in-out infinite;
   }
 
   .cta-button:hover {
-    background: linear-gradient(135deg, hsl(var(--wine-soft)), hsl(var(--wine)));
-    transform: translateY(-2px);
-    box-shadow: 0 14px 36px -6px hsl(var(--wine) / 0.55);
+    background: linear-gradient(135deg, hsl(var(--cta-hover)), hsl(0 65% 38%));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 16px 40px -4px hsl(var(--cta-glow) / 0.6);
+  }
+
+  @keyframes cta-glow-pulse {
+    0%, 100% { box-shadow: 0 10px 32px -4px hsl(var(--cta-glow) / 0.5), 0 0 0 0 hsl(var(--cta-glow) / 0.1); }
+    50% { box-shadow: 0 10px 32px -4px hsl(var(--cta-glow) / 0.5), 0 0 20px 4px hsl(var(--cta-glow) / 0.2); }
   }
 
   .cta-button-secondary {

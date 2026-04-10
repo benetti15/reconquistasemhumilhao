@@ -65,6 +65,8 @@ export default {
         highlight: "hsl(var(--highlight))",
         "off-white": "hsl(var(--off-white))",
         "gold-soft": "hsl(var(--gold-soft))",
+        cta: "hsl(var(--cta))",
+        "cta-hover": "hsl(var(--cta-hover))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
