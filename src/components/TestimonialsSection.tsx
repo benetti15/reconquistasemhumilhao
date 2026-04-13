@@ -2,7 +2,7 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   { name: "Camila R.", age: 28, text: "Eu estava prestes a mandar aquele textão desesperado. Li o mini-guia e consegui me segurar. Pela primeira vez em semanas, dormi em paz. Aquela mensagem teria acabado com tudo." },
-  { name: "Juliana M.", age: 34, text: "Achei que ia ser mais um conteúdo genérico, mas me vi em cada linha. Chorei, respirei e decidi parar de me humilhar. Melhor R$1,99 que já investi na minha vida." },
+  { name: "Juliana M.", age: 34, text: "Achei que ia ser mais um conteúdo genérico, mas me vi em cada linha. Chorei, respirei e decidi parar de me humilhar. Melhor R$5,90 que já investi na minha vida." },
   { name: "Fernanda S.", age: 31, text: "Depois de ler, percebi que tudo que eu fazia achando que era amor só afastava ele mais. Mudei minha postura. Duas semanas depois, ele voltou a me procurar." },
   { name: "Beatriz L.", age: 26, text: "Eu deletei o textão que ia mandar e reli o guia. Pela primeira vez eu escolhi minha dignidade. Esse material salvou meu autorrespeito." },
   { name: "Amanda P.", age: 29, text: "O checklist de valorização abriu meus olhos. Eu estava fazendo tudo errado achando que estava lutando pelo amor. Agora tenho clareza e direção." },

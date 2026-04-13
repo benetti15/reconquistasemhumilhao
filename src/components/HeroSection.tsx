@@ -63,9 +63,9 @@ const HeroSection = () => (
       <div>
         <p className="text-sm text-muted-foreground mb-2 tracking-wide">
           De <s className="text-muted-foreground/50">R$ 27,00</s> por apenas{" "}
-          <strong className="text-cta text-lg font-black">R$ 1,99</strong>
+          <strong className="text-cta text-lg font-black">R$ 5,90</strong>
         </p>
-        <a href="#oferta" className="cta-button inline-flex flex-col items-center">
+        <a href="https://pay.cakto.com.br/acfjdj2_845016" target="_blank" rel="noopener noreferrer" className="cta-button inline-flex flex-col items-center">
           Quero parar de me humilhar agora
           <small>Acesso imediato · PDF completo · Garantia de 7 dias</small>
         </a>

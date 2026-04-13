@@ -26,9 +26,9 @@ const WhyChasingSection = () => (
 
       {/* Mid-page CTA */}
       <div className="text-center mt-10">
-        <a href="#oferta" className="cta-button inline-flex flex-col items-center">
+        <a href="https://pay.cakto.com.br/acfjdj2_845016" target="_blank" rel="noopener noreferrer" className="cta-button inline-flex flex-col items-center">
           Quero recuperar meu valor
-          <small>Acesso imediato por R$ 1,99</small>
+          <small>Acesso imediato por R$ 5,90</small>
         </a>
       </div>
     </div>

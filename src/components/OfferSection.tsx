@@ -54,7 +54,7 @@ const OfferSection = () => (
         <div className="mb-6">
           <p className="text-sm line-through" style={{ color: "hsl(330 15% 28%)" }}>De R$ 27,00</p>
           <div className="font-serif text-[60px] md:text-[72px] font-black text-foreground leading-none mt-1">
-            <sup className="text-[22px] align-super text-cta">R$</sup> 1<sup className="text-[30px] align-middle text-cta">,99</sup>
+            <sup className="text-[22px] align-super text-cta">R$</sup> 5<sup className="text-[30px] align-middle text-cta">,90</sup>
           </div>
           <p className="text-xs text-muted-foreground mt-1.5">pagamento único · sem mensalidade · acesso vitalício</p>
           <p className="text-[13px] mt-3 font-medium" style={{ color: "hsl(var(--gold))" }}>
@@ -62,7 +62,7 @@ const OfferSection = () => (
           </p>
         </div>
 
-        <a href="#oferta" className="cta-button block w-full text-center mb-3.5">
+        <a href="https://pay.cakto.com.br/acfjdj2_845016" target="_blank" rel="noopener noreferrer" className="cta-button block w-full text-center mb-3.5">
           Sim, eu quero sair do impulso
           <small>Garantia de 7 dias · Risco zero</small>
         </a>
