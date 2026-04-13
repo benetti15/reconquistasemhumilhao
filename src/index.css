@@ -91,6 +91,8 @@
     pointer-events: none;
     z-index: 9999;
   }
+
+  #lovable-badge { display: none !important; }
 }
 
 @layer components {
