@@ -7,7 +7,7 @@ const UrgencyBar = () => (
     <p className="text-sm font-medium text-white flex items-center justify-center gap-2">
       <Zap className="w-4 h-4" />
       Oferta por tempo limitado — Acesso imediato por apenas{" "}
-      <strong className="text-gold">R$ 1,99</strong>
+      <strong className="text-gold">R$ 5,90</strong>
     </p>
   </div>
 );

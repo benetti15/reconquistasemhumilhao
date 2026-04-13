@@ -43,9 +43,9 @@ const InsideSection = () => (
 
       {/* CTA */}
       <div className="text-center mt-10">
-        <a href="#oferta" className="cta-button inline-flex flex-col items-center">
+        <a href="https://pay.cakto.com.br/acfjdj2_845016" target="_blank" rel="noopener noreferrer" className="cta-button inline-flex flex-col items-center">
           Quero acessar o mini-guia agora
-          <small>R$ 1,99 · Leitura rápida · Entrega imediata</small>
+          <small>R$ 5,90 · Leitura rápida · Entrega imediata</small>
         </a>
       </div>
     </div>

@@ -10,9 +10,9 @@ const ClosingSection = () => (
       </p>
       <div>
         <p className="text-sm text-muted-foreground mb-2">
-          Acesso imediato por <strong className="text-cta text-lg font-black">R$ 1,99</strong>
+          Acesso imediato por <strong className="text-cta text-lg font-black">R$ 5,90</strong>
         </p>
-        <a href="#oferta" className="cta-button inline-flex flex-col items-center">
+        <a href="https://pay.cakto.com.br/acfjdj2_845016" target="_blank" rel="noopener noreferrer" className="cta-button inline-flex flex-col items-center">
           Quero meu guia agora
           <small>Garantia de 7 dias · sem risco</small>
         </a>

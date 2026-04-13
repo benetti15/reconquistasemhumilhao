@@ -41,9 +41,9 @@ const ForWhomSection = () => (
 
       {/* CTA */}
       <div className="text-center mt-8">
-        <a href="#oferta" className="cta-button inline-flex flex-col items-center">
+        <a href="https://pay.cakto.com.br/acfjdj2_845016" target="_blank" rel="noopener noreferrer" className="cta-button inline-flex flex-col items-center">
           Quero me reposicionar com dignidade
-          <small>R$ 1,99 · Sem risco · Acesso imediato</small>
+          <small>R$ 5,90 · Sem risco · Acesso imediato</small>
         </a>
       </div>
     </div>
